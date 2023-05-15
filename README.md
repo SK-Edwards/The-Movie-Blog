@@ -16,8 +16,8 @@ Finally, if you're interested in leaving a comment or like/dislike, after you've
 
 ## Credits
 
-Alex Seidensticker - https://github.com/koi-as 
-Branham Morris - https://github.com/BranhamMorris
-Ethan Bosen - https://github.com/EthanBosen
-Parisa Darkhal - https://github.com/ParisaDarkhal
-SK-Edwards - https://github.com/SK-Edwards 
+Alex Seidensticker - https://github.com/koi-as </br>
+Branham Morris - https://github.com/BranhamMorris </br>
+Ethan Bosen - https://github.com/EthanBosen </br>
+Parisa Darkhal - https://github.com/ParisaDarkhal </br>
+SK-Edwards - https://github.com/SK-Edwards </br>
