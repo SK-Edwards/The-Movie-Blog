@@ -1,0 +1,1 @@
+// If we need helpers in the handlebars files, we can put them here
