@@ -8,7 +8,7 @@ User.hasMany(Comment, {
 });
 
 Comment.belongsTo(User, {
-  foreignKey: "User_id",
+  foreignKey: "user_id",
 });
 
 Movie.hasMany(Comment, {
