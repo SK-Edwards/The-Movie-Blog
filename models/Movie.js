@@ -25,7 +25,6 @@ Movie.init(
     },
     poster: {
       type: DataTypes.STRING,
-
     },
     star_rating: {
       type: DataTypes.INTEGER,
