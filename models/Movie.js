@@ -15,17 +15,12 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    year: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     movie_info: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
     poster: {
       type: DataTypes.STRING,
-
     },
     star_rating: {
       type: DataTypes.INTEGER,
