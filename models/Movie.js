@@ -23,10 +23,14 @@ Movie.init(
       type: DataTypes.STRING,
     },
     star_rating: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      validate: {
+        isDecimal:true
+      }
     },
     release_date: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DATE,
     },
   },
 
