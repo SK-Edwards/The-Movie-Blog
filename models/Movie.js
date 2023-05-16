@@ -19,11 +19,14 @@ Movie.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    poster: {},
+    poster: {
+      type: DataTypes.STRING,
+
+    },
     star_rating: {
       type: DataTypes.INTEGER,
     },
-    like: {
+    release_date: {
       type: DataTypes.INTEGER,
     },
   },
