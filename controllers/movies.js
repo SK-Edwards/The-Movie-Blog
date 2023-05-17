@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 // localhost:4001/movies/:id
 router.get('/:id', async (req, res) => {
     // get comments from db
-    const commentData = await Movie.findByPk(req.params.id, {
+    const movieData = await Movie.findByPk(req.params.id, {
         include: [{ model: Comment }]
     });
 
@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
     };
 
     console.log(commentData);
-    res.render('movie-info', commentData);
+    res.render('movie-info', movieData);
 });
 
 // post request for comments
@@ -31,7 +31,8 @@ router.post('/:id', (req, res) => {
     const commentData = Comment.create({
         ...req.body,
         "movie_id": req.params.id
-    }, {
+    },
+    {
         include: [{ model: User }, { model: Movie}]
     });
 
