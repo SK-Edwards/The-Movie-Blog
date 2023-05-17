@@ -1,5 +1,6 @@
 const express = require('express'); // import express
 const exphbs = require('express-handlebars');
+const path = require('path');
 const sequelize = require('./config/connection');
 const options = require('./seed')
 const routes = require('./controllers');
@@ -15,12 +16,12 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // for post requests
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 // localhost:4001/
 app.use('/', routes);
 
  // start the server
-sequelize.sync({force: false}).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
