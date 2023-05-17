@@ -11,7 +11,7 @@ const postCommentHandler = async (event) => {
     event.preventDefault();
 
     if (commentBox) {
-        fetch(apiRoute, {
+        const response = fetch(apiRoute, {
             method: 'POST',
             body: JSON.stringify({ commentBox }),
             headers: { 'Content-Type': 'application/json' }

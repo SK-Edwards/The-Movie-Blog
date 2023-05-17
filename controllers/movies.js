@@ -17,11 +17,11 @@ router.get('/:id', async (req, res) => {
         include: [{ model: Comment }]
     });
 
-    if (!commentData) {
+    if (!movieData) {
         res.status(404).json('Cannot find movie by that id!');
     };
 
-    console.log(commentData);
+    console.log(movieData);
     res.render('movie-info', movieData);
 });
 
