@@ -1,7 +1,7 @@
 const express = require("express"); // import express
 const exphbs = require("express-handlebars");
 const session = require("express-session");
-
+const path = require('path');
 const sequelize = require("./config/connection");
 
 const routes = require("./controllers");
@@ -29,6 +29,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // for post requests
+app.use(express.static(path.join(__dirname, 'public')));
 
 // localhost:4001/
 app.use("/", routes);
