@@ -4,7 +4,7 @@ require('dotenv').config();
 let sequelize;
  //necessary for database deployment.
 if(process.env.JAWSDB_URL) {
-    sequelize = new Sequilize(process.env.JAWSDB_URL);
+    sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
     //for connecting to local database.
     sequelize = new Sequelize(
