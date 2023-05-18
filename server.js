@@ -1,7 +1,7 @@
 const express = require("express"); // import express
 const exphbs = require("express-handlebars");
 const session = require("express-session");
-const path = require('path');
+const path = require("path");
 const sequelize = require("./config/connection");
 
 const routes = require("./controllers");
@@ -19,6 +19,9 @@ const sess = {
 };
 app.use(session(sess));
 
+// to make the tables for the first time
+const models = require("./models");
+
 // setup public
 app.use(express.static(__dirname + "/public"));
 
@@ -30,7 +33,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // for post requests
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // localhost:4001/
 app.use("/", routes);
