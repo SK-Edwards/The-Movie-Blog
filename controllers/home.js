@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Movie, Comment } = require('../models');
+const {User, Movie, Comment } = require('../models');
 
 
 router.get('/', async(req,res) => {
@@ -8,8 +8,5 @@ router.get('/', async(req,res) => {
 
 
 
-router.get('/' async(req,res) => {
-  
-  const 
-})
+
 module.exports = router; 

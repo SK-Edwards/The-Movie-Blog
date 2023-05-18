@@ -3,7 +3,7 @@ const { User, Movie, Comment } = require('../models');
 
 
 router.get('/', async(req,res) => {
-    res.render('movie-list')
+    res.render('movielist')
 
 
 
