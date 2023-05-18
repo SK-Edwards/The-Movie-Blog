@@ -13,16 +13,22 @@ router.get("/", async (req, res) => {
 // localhost:4001/movies/:id
 router.get("/:id", async (req, res) => {
   // get comments from db
-  const commentData = await Movie.findByPk(req.params.id, {
+  const movieData = await Movie.findByPk(req.params.id, {
     include: [{ model: Comment }],
   });
 
-  if (!commentData) {
+  console.log(movieData);
+
+  const movieInfo = movieData._options.attributes;
+
+  if (!movieData) {
     res.status(404).json("Cannot find movie by that id!");
   }
 
-  console.log(commentData);
-  res.render("movie-info", commentData);
+  let movie = movieInfo.map((data) => data.get({ plain: true }));
+
+  console.log(movieData);
+  res.render("movie-info", { movie });
 });
 
 // post request for comments
