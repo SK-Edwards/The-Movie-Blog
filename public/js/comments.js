@@ -19,6 +19,7 @@ const postCommentHandler = async (event) => {
 
         if (response.ok) {
             alert('Comment Posted!');
+            return json(commentBox);
         } else {
             alert('Failed to Comment!');
         };
