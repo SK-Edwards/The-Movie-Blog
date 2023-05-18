@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   const user = req.session.fullName;
   const movieData = await Movie.findAll();
   let moviePosts = movieData.map((post) => post.get({ plain: true }));
-  res.render("movieinfo", { moviePosts, user });
+  res.render("movielist", { moviePosts, user });
 });
 
 // localhost:4001/movies/:id

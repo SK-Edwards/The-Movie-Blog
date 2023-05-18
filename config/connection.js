@@ -1,6 +1,6 @@
+
 const Sequelize = require('sequelize');
 require('dotenv').config();
-
 let sequelize;
  //necessary for database deployment.
 if(process.env.JAWSDB_URL) {
