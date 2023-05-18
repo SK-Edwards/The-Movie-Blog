@@ -28,8 +28,10 @@ router.get('/:id', async (req, res) => {
 // post request for comments
 router.post('/:id', (req, res) => {
     console.log(req.params.id);
+    const userData = req.session.userId = userData.id
     const commentData = Comment.create({
         ...req.body,
+        "user_id": userData,
         "movie_id": req.params.id
     },
     {
