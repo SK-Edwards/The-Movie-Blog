@@ -6,6 +6,7 @@ const movielist = require("./movie-list.js");
 
 // homepage route
 router.use("/home", home);
+
 // localhost:4001/movies / movie info page
 router.use("/movies", movies);
 
