@@ -1,5 +1,7 @@
 :root
-
+.full-page {
+  background-image: url('../public/image/GettyImages-1336937059-1600x728.jpg');
+}
 h1 {
     color: black;
     font-weight: bold;

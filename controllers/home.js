@@ -1,16 +1,11 @@
-const express = require("express");
-let router = express.Router();
+const router = require('express').Router();
+const { Movie, Comment } = require('../models');
 
-router
-  .route("/home")
-  .get((req,res) => {
-    res.send("get /home");
-  })
-  .post((req,res) => {
-    res.send("post /home")
-  })
-  .put((req,res) => {
-    res.send("put /home")
-  });
+
+router.get('/', async(req,res) => {
+  res.render('home')
+});
+
+
 
 module.exports = router; 
