@@ -26,15 +26,16 @@ router.get("/:id", async (req, res) => {
 });
 
 // post request for comments
-router.post("/:id", (req, res) => {
-  console.log(req.params.id);
-  const commentData = Comment.create(
-    {
-      ...req.body,
-      movie_id: req.params.id,
-    },
-    {
-      include: [{ model: User }, { model: Movie }],
+
+router.post('/:id', async (req, res) => {
+    let movieId = Movie.findByPk(req.params.id);
+    let userId = req.query.userId;
+    console.log(movieId);
+    console.log(userId);
+    const commentData = await Comment.create({
+        "content": req.body.commentBox,
+        "user_id": userId,
+        "movie_id": movieId
     }
   );
 
