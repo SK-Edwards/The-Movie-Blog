@@ -72,7 +72,8 @@ router.post("/login", async (req, res) => {
   }
   req.session.fullName = userData.username;
   req.session.userId = userData.id;
-  res.redirect("/movies");
+  console.log('hi');
+  res.redirect(`/movies?userId=${userData.id}`);
 });
 
 // checks if the user is logged in or not
