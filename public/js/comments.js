@@ -5,11 +5,11 @@
 const apiRoute = '/movies/:id';
 
 const postBtn = document.getElementById('post');
-const commentBox = document.getElementById('comment-box');
+let commentBox = document.getElementById('comment-box').value;
 
 const postCommentHandler = async (event) => {
     event.preventDefault();
-
+    console.log(JSON.stringify(commentBox));
     if (commentBox) {
         const response = fetch(apiRoute, {
             method: 'POST',
@@ -19,7 +19,6 @@ const postCommentHandler = async (event) => {
 
         if (response.ok) {
             alert('Comment Posted!');
-            return json(commentBox);
         } else {
             alert('Failed to Comment!');
         };

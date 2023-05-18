@@ -34,7 +34,7 @@ router.post('/:id', (req, res) => {
     console.log(movieId);
     console.log(userId);
     const commentData = Comment.create({
-        "content": JSON.stringify(req.body),
+        "content": req.body.commentBox,
         "user_id": userId,
         "movie_id": movieId
     },
