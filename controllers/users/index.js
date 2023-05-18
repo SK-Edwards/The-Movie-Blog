@@ -33,7 +33,7 @@ router.post("/signup", async (req, res) => {
   if (userData.username) {
     req.session.fullName = userData.username; //fullName is the name of new variable
   }
-  res.redirect("/");
+  res.redirect("/movies");
 });
 
 // localhost:4001/logout
