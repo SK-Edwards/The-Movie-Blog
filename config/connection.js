@@ -1,6 +1,6 @@
+
 const Sequelize = require('sequelize');
 require('dotenv').config();
-
 let sequelize;
  //necessary for database deployment.
 if(process.env.JAWSDB_URL) {
@@ -16,7 +16,7 @@ if(process.env.JAWSDB_URL) {
             dialect: 'mysql',
             port: 3306  //local database address.
         }
-    )
-};
+    );
+}
 
 module.exports = sequelize;
