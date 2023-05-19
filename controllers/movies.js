@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Movie, Comment } = require("../models");
+const { Movie, Comment } = require("../models");
 
 //my second attempt (parisa)
 //localhost:4001/movies
