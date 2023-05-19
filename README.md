@@ -18,7 +18,7 @@ Finally, if you're interested in leaving a comment or like/dislike, after you've
 Website fuctionality:
 
 * Video link
-![*](https://drive.google.com/file/d/18lFFcsYwIgl2hektfn7Lz6Br-xs68w0k/view)
+https://drive.google.com/file/d/18lFFcsYwIgl2hektfn7Lz6Br-xs68w0k/view
 
 ## Credits
 
