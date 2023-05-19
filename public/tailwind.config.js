@@ -1,9 +1,8 @@
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["views/*.hbs", "views/*.handlebars"],
   theme: {
-    extend: {
-      colors: {
-        clifford: '#da373d'
-      }
-    }
-  }
-}
+    extend: {},
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
