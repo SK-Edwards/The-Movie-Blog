@@ -14,6 +14,12 @@ If you are new and need to signup, simply click the link under the login text bo
 
 Finally, if you're interested in leaving a comment or like/dislike, after you've logged in, navigate to the movie page you wish to comment on, and click the '+ Add Comment' button. It will prompt you with a text field that you can fill out, and when you're done writing, you can click the 'post comment' button and it will generate in the comments box below. 
 
+
+Website fuctionality:
+
+* Video link
+![*](https://drive.google.com/file/d/18lFFcsYwIgl2hektfn7Lz6Br-xs68w0k/view)
+
 ## Credits
 
 Alex Seidensticker - https://github.com/koi-as </br>
